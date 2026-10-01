@@ -1,21 +1,58 @@
-MIT License
+BronchoX Academic License
 
-Copyright (c) 2018 Universitat Autònoma de Barcelona and Computer Vision Center
+Copyright (c) 2018-2026 IAM group (Computer Vision Center and Universitat Autònoma de Barcelona)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This software is provided exclusively for research and educational purposes.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Commercial use is prohibited without prior written permission.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+If this software contributes to published research, users are requested to cite:
+
+Navigation and Guiding
+
+@article{gil2020intraoperative,
+  title={Intraoperative extraction of airways anatomy in videobronchoscopy},
+  author={Gil, Debora and Esteban-Lansaque, Antonio and Borras, Agnes and Ramirez, Esmitt and Ramos, Carles Sanchez},
+  journal={IEEE access},
+  volume={8},
+  pages={159696--159704},
+  year={2020},
+  publisher={IEEE}
+}
+
+@inproceedings{esteban2016stable,
+  title={Stable anatomical structure tracking for video-bronchoscopy navigation},
+  author={Esteban-Lansaque, Antonio and S{\'a}nchez, Carles and Borras, Agn{\'e}s and Diez-Ferrer, Marta and Rosell, Antoni and Gil, Debora},
+  booktitle={Workshop on clinical image-based procedures},
+  pages={18--26},
+  year={2016},
+  organization={Springer}
+}
+
+Segmentaiton Method
+
+@article{gil2019segmentation,
+  title={Segmentation of distal airways using structural analysis},
+  author={Gil, Debora and Sanchez, Carles and Borras, Agnes and Diez-Ferrer, Marta and Rosell, Antoni},
+  journal={Plos one},
+  volume={14},
+  number={12},
+  pages={e0226006},
+  year={2019},
+  publisher={Public Library of Science San Francisco, CA USA}
+}
+
+Software
+
+@article{ramirez2018bronchox,
+  title={BronchoX: bronchoscopy exploration software for biopsy intervention planning},
+  author={Ram{\'\i}rez, Esmitt and S{\'a}nchez, Carles and Borr{\`a}s, Agn{\'e}s and Diez-Ferrer, Marta and Rosell, Antoni and Gil, Debora},
+  journal={Healthcare technology letters},
+  volume={5},
+  number={5},
+  pages={177--182},
+  year={2018},
+  publisher={Wiley Online Library}
+}
+
+The software is provided "as is", without warranty of any kind.

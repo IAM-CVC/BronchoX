@@ -2,7 +2,9 @@
 
 BronchoX: bronchoscopy exploration software for biopsy intervention planning
 
+<p align="center">
 docs/screenshots/BronchoXApp.png
+</p>
 
 ## Overview
  
@@ -279,19 +281,6 @@ If you use BronchoX in academic research, please cite the associated publication
 }
 ```
 
-## Application
-```bibtex
-@article{sanchez2018bronchox,
-  author  = {Carles Sanchez Ramos and Altres Autors},
-  title   = {Títol de l'article},
-  journal = {Nom de la Revista},
-  year    = {2018},
-  volume  = {XX},
-  number  = {X},
-  pages   = {XX--YY},
-  doi     = {10.xxxx/yyyy}
-}
-```
 ## Segmentation Method
 ```bibtex
 @article{gil2019segmentation,
@@ -303,5 +292,19 @@ If you use BronchoX in academic research, please cite the associated publication
   pages={e0226006},
   year={2019},
   publisher={Public Library of Science San Francisco, CA USA}
+}
+```
+
+## Software
+```bibtex
+@article{ramirez2018bronchox,
+  title={BronchoX: bronchoscopy exploration software for biopsy intervention planning},
+  author={Ram{\'\i}rez, Esmitt and S{\'a}nchez, Carles and Borr{\`a}s, Agn{\'e}s and Diez-Ferrer, Marta and Rosell, Antoni and Gil, Debora},
+  journal={Healthcare technology letters},
+  volume={5},
+  number={5},
+  pages={177--182},
+  year={2018},
+  publisher={Wiley Online Library}
 }
 ```
