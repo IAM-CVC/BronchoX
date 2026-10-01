@@ -2,7 +2,7 @@
 
 BronchoX: bronchoscopy exploration software for biopsy intervention planning
 
-![BronchoX Screenshot](docs/screenshots/BronchoXApp.png
+![BronchoX Screenshot](docs/screenshots/BronchoXApp.png)
 
 
 ## Overview
@@ -24,7 +24,7 @@ In addition, BronchoX supports the export of bronchial bifurcation images along 
 - Optimal path computation from the trachea to user-selected targets.
 - Step-by-step and animated route visualization.
 - Export of airway bifurcation images for documentation and analysis.
-(see manual user in spanish doc/ManualUsuario.docx) 
+- (see manual user in spanish doc/ManualUsuario.docx for step by step documentation) 
 
  
 ## Requirements
