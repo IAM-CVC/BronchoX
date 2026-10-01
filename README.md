@@ -2,7 +2,7 @@
 
 BronchoX: bronchoscopy exploration software for biopsy intervention planning
 
-<img src="docs/screenshots/BronchoXApp.png" alt="BronchoX Screenshot>
+!docs/screenshots/BronchoXApp.png
 
 ## Overview
  
