@@ -1,0 +1,31 @@
+# Build directories
+build/
+x64/
+cmake-build-*/
+
+# Visual Studio
+.vs/
+Debug/
+Release/
+*.user
+*.suo
+*.obj
+*.pdb
+*.ilk
+
+# IDEs
+.idea/
+
+# Generated binaries
+*.exe
+*.dll
+
+# MATLAB SDK headers
+include/matlab/
+
+# Documentation not intended for release
+documentation/
+
+# Temporary files
+*._*
+

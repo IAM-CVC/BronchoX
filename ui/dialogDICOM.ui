@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>dialogDICOM</class>
+    <widget class="QDialog" name="dialogDICOM">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>523</width>
+                <height>267</height>
+            </rect>
+        </property>
+        <property name="font">
+            <font>
+                <family>Segoe UI</family>
+            </font>
+        </property>
+        <property name="windowTitle">
+            <string>Dialog</string>
+        </property>
+        <widget class="QTableWidget" name="tableWidget">
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>30</y>
+                    <width>481</width>
+                    <height>171</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>8</pointsize>
+                </font>
+            </property>
+            <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="alternatingRowColors">
+                <bool>true</bool>
+            </property>
+            <property name="selectionMode">
+                <enum>QAbstractItemView::SingleSelection</enum>
+            </property>
+            <property name="selectionBehavior">
+                <enum>QAbstractItemView::SelectRows</enum>
+            </property>
+            <property name="textElideMode">
+                <enum>Qt::ElideLeft</enum>
+            </property>
+            <property name="showGrid">
+                <bool>true</bool>
+            </property>
+            <property name="cornerButtonEnabled">
+                <bool>true</bool>
+            </property>
+            <property name="columnCount">
+                <number>5</number>
+            </property>
+            <attribute name="verticalHeaderVisible">
+                <bool>false</bool>
+            </attribute>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+        </widget>
+        <widget class="QPushButton" name="btnNext">
+            <property name="geometry">
+                <rect>
+                    <x>350</x>
+                    <y>230</y>
+                    <width>70</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Next &gt;</string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="btnBack">
+            <property name="geometry">
+                <rect>
+                    <x>270</x>
+                    <y>230</y>
+                    <width>70</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>&lt; Back</string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="btnCancel">
+            <property name="geometry">
+                <rect>
+                    <x>430</x>
+                    <y>230</y>
+                    <width>70</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Cancel</string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="btnBrowse">
+            <property name="geometry">
+                <rect>
+                    <x>430</x>
+                    <y>110</y>
+                    <width>70</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Browse...</string>
+            </property>
+        </widget>
+        <widget class="QLineEdit" name="txtInput">
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>50</y>
+                    <width>481</width>
+                    <height>25</height>
+                </rect>
+            </property>
+        </widget>
+        <widget class="QLabel" name="lblSubTitle">
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>30</y>
+                    <width>481</width>
+                    <height>171</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Image Filename:</string>
+            </property>
+            <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+        </widget>
+        <widget class="QLabel" name="lblTitle">
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>10</y>
+                    <width>371</width>
+                    <height>16</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Segoe UI</family>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                </font>
+            </property>
+            <property name="text">
+                <string>Open DICOM file</string>
+            </property>
+        </widget>
+        <widget class="QLabel" name="lblPath">
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>80</y>
+                    <width>411</width>
+                    <height>28</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>7</pointsize>
+                </font>
+            </property>
+            <property name="text">
+                <string/>
+            </property>
+            <property name="wordWrap">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="Line" name="line">
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>215</y>
+                    <width>481</width>
+                    <height>2</height>
+                </rect>
+            </property>
+            <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+            </property>
+        </widget>
+        <zorder>lblSubTitle</zorder>
+        <zorder>tableWidget</zorder>
+        <zorder>btnNext</zorder>
+        <zorder>btnBack</zorder>
+        <zorder>btnCancel</zorder>
+        <zorder>btnBrowse</zorder>
+        <zorder>txtInput</zorder>
+        <zorder>lblTitle</zorder>
+        <zorder>lblPath</zorder>
+        <zorder>line</zorder>
+    </widget>
+    <resources/>
+    <connections>
+        <connection>
+            <sender>btnBrowse</sender>
+            <signal>clicked()</signal>
+            <receiver>dialogDICOM</receiver>
+            <slot>openDICOMDir()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>394</x>
+                    <y>122</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>228</x>
+                    <y>133</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>btnNext</sender>
+            <signal>clicked()</signal>
+            <receiver>dialogDICOM</receiver>
+            <slot>next()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>314</x>
+                    <y>242</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>228</x>
+                    <y>133</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>tableWidget</sender>
+            <signal>itemPressed(QTableWidgetItem*)</signal>
+            <receiver>dialogDICOM</receiver>
+            <slot>selectedItem(QTableWidgetItem*)</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>225</x>
+                    <y>115</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>228</x>
+                    <y>133</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>btnCancel</sender>
+            <signal>clicked()</signal>
+            <receiver>dialogDICOM</receiver>
+            <slot>reject()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>394</x>
+                    <y>242</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>228</x>
+                    <y>133</y>
+                </hint>
+            </hints>
+        </connection>
+    </connections>
+    <slots>
+        <slot>openDICOMDir()</slot>
+        <slot>next()</slot>
+        <slot>back()</slot>
+        <slot>selectedItem(QTableWidgetItem*)</slot>
+        <slot>finish()</slot>
+    </slots>
+</ui>

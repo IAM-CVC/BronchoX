@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainView</class>
+ <widget class="QMainWindow" name="MainView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1046</width>
+    <height>872</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI</family>
+    <kerning>true</kerning>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>BronchoX - Planning</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="style.qrc">
+    <normaloff>:/qdarkstyle/rc/bronchox_256x256.ico</normaloff>:/qdarkstyle/rc/bronchox_256x256.ico</iconset>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="2">
+     <widget class="QVTKOpenGLWidget" name="m_qvtkOpenGLWidgetAxial" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>350</width>
+        <height>350</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QVTKOpenGLWidget" name="m_qvtkOpenGLWidgetSagittal" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>350</width>
+        <height>350</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QSlider" name="sliderSagittal">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="sliderPosition">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QSlider" name="sliderCoronal">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="sliderPosition">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QVTKOpenGLWidget" name="m_qvtkOpenGLWidget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>350</width>
+        <height>350</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QVTKOpenGLWidget" name="m_qvtkOpenGLWidgetCoronal" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>350</width>
+        <height>350</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QSlider" name="sliderAxial">
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="sliderPosition">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" rowspan="4">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>600</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>208</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideNone</enum>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Navigation</string>
+       </attribute>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>141</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Working Directory</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="checkShowSkeleton">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>30</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="style.qrc">
+          <normaloff>:/icons/rc/icons8_More_52px.png</normaloff>:/icons/rc/icons8_More_52px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="checkShowSegmentsLines">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>30</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="style.qrc">
+          <normaloff>:/icons/rc/icons8_Tree_Structure_64px.png</normaloff>:/icons/rc/icons8_Tree_Structure_64px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="checkShowRoute">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>30</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="style.qrc">
+          <normaloff>:/icons/rc/icons8_Polyline_26px.png</normaloff>:/icons/rc/icons8_Polyline_26px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="checkShowSegmentsPoints">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>30</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="style.qrc">
+          <normaloff>:/icons/rc/icons8_Animated_Skeleton_64px.png</normaloff>:/icons/rc/icons8_Animated_Skeleton_64px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QSlider" name="sldNavVelocity">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>150</y>
+          <width>221</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="maximum">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>5</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::NoTicks</enum>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnPlay">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>90</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="style.qrc">
+          <normaloff>:/icons/rc/icons8_Play_32px.png</normaloff>:/icons/rc/icons8_Play_32px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnNext">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>90</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="style.qrc">
+          <normaloff>:/icons/rc/icons8_Fast_Forward_32px.png</normaloff>:/icons/rc/icons8_Fast_Forward_32px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnPrev">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>90</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="style.qrc">
+          <normaloff>:/icons/rc/icons8_Rewind_32px.png</normaloff>:/icons/rc/icons8_Rewind_32px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnReset">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>90</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="style.qrc">
+          <normaloff>:/icons/rc/icons8_Refresh_32px.png</normaloff>:/icons/rc/icons8_Refresh_32px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnStop">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>90</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="style.qrc">
+          <normaloff>:/icons/rc/icons8_Stop_32px.png</normaloff>:/icons/rc/icons8_Stop_32px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="segmentation">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>30</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="style.qrc">
+          <normaloff>:/icons/rc/icons_segmentation.png</normaloff>:/icons/rc/icons_segmentation.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnForkImgGen">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>200</y>
+          <width>51</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="style.qrc">
+          <normaloff>:/icons/rc/icons_export.png</normaloff>:/icons/rc/icons_export.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1046</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <widget class="QMenu" name="menuLayout">
+     <property name="title">
+      <string>Layout</string>
+     </property>
+     <addaction name="actionFour_Up"/>
+     <addaction name="action3D_Only"/>
+     <addaction name="actionAxial_Slice_Only"/>
+     <addaction name="actionSagittal_Slice_Only"/>
+     <addaction name="actionCoronal_Slice_Only"/>
+    </widget>
+    <addaction name="menuLayout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="separator"/>
+   <addaction name="actionSetSeeds"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action3Dairways"/>
+   <addaction name="actionAxial"/>
+   <addaction name="actionSagittal"/>
+   <addaction name="actionCoronal"/>
+   <addaction name="separator"/>
+   <addaction name="actionAnnotations"/>
+   <addaction name="separator"/>
+   <addaction name="actionFullScreen"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="style.qrc">
+     <normaloff>:/icons/rc/icons8_Open_26px.png</normaloff>:/icons/rc/icons8_Open_26px.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionAxial">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="style.qrc">
+     <normaloff>:/icons/rc/icons8_Circled_A_48px.png</normaloff>
+     <normalon>:/icons/rc/icons8_X_Coordinate_50px.png</normalon>:/icons/rc/icons8_Circled_A_48px.png</iconset>
+   </property>
+   <property name="text">
+    <string>Axial</string>
+   </property>
+   <property name="toolTip">
+    <string>Show/Hide Axial</string>
+   </property>
+  </action>
+  <action name="actionSagittal">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="style.qrc">
+     <normaloff>:/icons/rc/icons8_Circled_S_48px.png</normaloff>:/icons/rc/icons8_Circled_S_48px.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sagittal</string>
+   </property>
+   <property name="toolTip">
+    <string>Show/Hide Sagittal</string>
+   </property>
+  </action>
+  <action name="actionCoronal">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="style.qrc">
+     <normaloff>:/icons/rc/icons8_Circled_C_48px.png</normaloff>:/icons/rc/icons8_Circled_C_48px.png</iconset>
+   </property>
+   <property name="text">
+    <string>Coronal</string>
+   </property>
+   <property name="toolTip">
+    <string>Show/Hide Coronal</string>
+   </property>
+  </action>
+  <action name="actionFullScreen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="style.qrc">
+     <normaloff>:/icons/rc/3D_only.png</normaloff>:/icons/rc/3D_only.png</iconset>
+   </property>
+   <property name="text">
+    <string>Full3D</string>
+   </property>
+   <property name="toolTip">
+    <string>Show only 3D</string>
+   </property>
+  </action>
+  <action name="actionSetSeeds">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="style.qrc">
+     <normaloff>:/icons/rc/icons8_Center_of_Gravity_52px.png</normaloff>:/icons/rc/icons8_Center_of_Gravity_52px.png</iconset>
+   </property>
+   <property name="text">
+    <string>SetSeeds</string>
+   </property>
+   <property name="toolTip">
+    <string>Set Seeds</string>
+   </property>
+  </action>
+  <action name="actionAnnotations">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="style.qrc">
+     <normaloff>:/icons/rc/icons8_OCR_26px.png</normaloff>:/icons/rc/icons8_OCR_26px.png</iconset>
+   </property>
+   <property name="text">
+    <string>Annotations</string>
+   </property>
+   <property name="toolTip">
+    <string>Show/Hide Annotations</string>
+   </property>
+  </action>
+  <action name="action3Dairways">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="style.qrc">
+     <normaloff>:/icons/rc/icons8_Lungs_26px.png</normaloff>:/icons/rc/icons8_Lungs_26px.png</iconset>
+   </property>
+   <property name="text">
+    <string>3Dairways</string>
+   </property>
+   <property name="toolTip">
+    <string>Show/Hide 3D airways</string>
+   </property>
+  </action>
+  <action name="actionFour_Up">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/icons/rc/Four-Up.png</normaloff>:/icons/rc/Four-Up.png</iconset>
+   </property>
+   <property name="text">
+    <string>Four-Up</string>
+   </property>
+  </action>
+  <action name="action3D_Only">
+   <property name="text">
+    <string>3D only</string>
+   </property>
+  </action>
+  <action name="actionAxial_Slice_Only">
+   <property name="text">
+    <string>Axial slice only</string>
+   </property>
+  </action>
+  <action name="actionSagittal_Slice_Only">
+   <property name="text">
+    <string>Sagittal slice only</string>
+   </property>
+  </action>
+  <action name="actionCoronal_Slice_Only">
+   <property name="text">
+    <string>Coronal slice only</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKOpenGLWidget</class>
+   <extends>QWidget</extends>
+   <header>qvtkopenglwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="style.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>checkShowSegmentsLines</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainView</receiver>
+   <slot>showLines(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>128</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>379</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkShowSegmentsPoints</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainView</receiver>
+   <slot>showSegments(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>168</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>379</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkShowSkeleton</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainView</receiver>
+   <slot>showSkeleton(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>88</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>379</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sldNavVelocity</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>MainView</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>379</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOpen</sender>
+   <signal>triggered()</signal>
+   <receiver>MainView</receiver>
+   <slot>openDICOMDlg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>533</x>
+     <y>408</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnReset</sender>
+   <signal>clicked()</signal>
+   <receiver>MainView</receiver>
+   <slot>resetVideo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>48</x>
+     <y>358</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>379</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnPlay</sender>
+   <signal>clicked()</signal>
+   <receiver>MainView</receiver>
+   <slot>playVideo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>98</x>
+     <y>308</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>379</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnStop</sender>
+   <signal>clicked()</signal>
+   <receiver>MainView</receiver>
+   <slot>stopVideo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>148</x>
+     <y>308</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>379</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkShowRoute</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainView</receiver>
+   <slot>showRoute(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>198</x>
+     <y>228</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>379</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderAxial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainView</receiver>
+   <slot>sliderAxialChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>575</x>
+     <y>444</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>515</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderSagittal</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainView</receiver>
+   <slot>sliderSagittalChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>932</x>
+     <y>444</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>515</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderCoronal</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainView</receiver>
+   <slot>sliderCoronalChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>932</x>
+     <y>825</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>515</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAxial</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainView</receiver>
+   <slot>showAxial(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>515</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSagittal</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainView</receiver>
+   <slot>showSagittal(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>515</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCoronal</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainView</receiver>
+   <slot>showCoronal(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>515</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFullScreen</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainView</receiver>
+   <slot>showFull3D(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>515</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSetSeeds</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainView</receiver>
+   <slot>setSeeds(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>515</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAnnotations</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainView</receiver>
+   <slot>showAnnotations(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>515</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action3Dairways</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainView</receiver>
+   <slot>showOBJ(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>468</x>
+     <y>427</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>segmentation</sender>
+   <signal>clicked()</signal>
+   <receiver>MainView</receiver>
+   <slot>segmentation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>30</x>
+     <y>120</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>434</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnPrev</sender>
+   <signal>clicked()</signal>
+   <receiver>MainView</receiver>
+   <slot>prevVideo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>30</x>
+     <y>290</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>434</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnNext</sender>
+   <signal>clicked()</signal>
+   <receiver>MainView</receiver>
+   <slot>nextVideo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>180</x>
+     <y>290</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>434</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFour_Up</sender>
+   <signal>triggered()</signal>
+   <receiver>MainView</receiver>
+   <slot>showAllView()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>434</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action3D_Only</sender>
+   <signal>triggered()</signal>
+   <receiver>MainView</receiver>
+   <slot>showOnly3D()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>434</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAxial_Slice_Only</sender>
+   <signal>triggered()</signal>
+   <receiver>MainView</receiver>
+   <slot>showOnlyAxial()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>434</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSagittal_Slice_Only</sender>
+   <signal>triggered()</signal>
+   <receiver>MainView</receiver>
+   <slot>showOnlySagittal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>434</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCoronal_Slice_Only</sender>
+   <signal>triggered()</signal>
+   <receiver>MainView</receiver>
+   <slot>showOnlyCoronal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>434</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnForkImgGen</sender>
+   <signal>clicked()</signal>
+   <receiver>MainView</receiver>
+   <slot>forkImgGen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>130</x>
+     <y>270</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>522</x>
+     <y>435</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>showOBJ(bool)</slot>
+  <slot>showSkeleton(bool)</slot>
+  <slot>showRoute(bool)</slot>
+  <slot>showSegments(bool)</slot>
+  <slot>showLines(bool)</slot>
+  <slot>setNum(int)</slot>
+  <slot>showUnityPath(bool)</slot>
+  <slot>playVideo()</slot>
+  <slot>resetVideo()</slot>
+  <slot>stopVideo()</slot>
+  <slot>nextVideo()</slot>
+  <slot>prevVideo()</slot>
+  <slot>openDICOMDlg()</slot>
+  <slot>sliderAxialChanged(int)</slot>
+  <slot>sliderSagittalChanged(int)</slot>
+  <slot>sliderCoronalChanged(int)</slot>
+  <slot>showAxial(bool)</slot>
+  <slot>showSagittal(bool)</slot>
+  <slot>showCoronal(bool)</slot>
+  <slot>showFull3D(bool)</slot>
+  <slot>showSeeds(bool)</slot>
+  <slot>setSeeds(bool)</slot>
+  <slot>showAnnotations(bool)</slot>
+  <slot>test()</slot>
+  <slot>show3DOnly(bool)</slot>
+  <slot>segmentation()</slot>
+  <slot>showAllView()</slot>
+  <slot>showOnly3D()</slot>
+  <slot>showOnlyAxial()</slot>
+  <slot>showOnlySagittal()</slot>
+  <slot>showOnlyCoronal()</slot>
+  <slot>forkImgGen()</slot>
+ </slots>
+</ui>

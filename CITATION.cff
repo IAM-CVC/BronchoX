@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use BronchoX in your research, please cite the associated publications in BronchoX.bib."
+
+title: "BronchoX"
+type: software
+
+authors:
+  - family-names: Ramírez
+    given-names: Esmitt
+  - family-names: Sánchez
+    given-names: Carles
+  - family-names: Borràs
+    given-names: Agnés
+  - family-names: Diez-Ferrer
+    given-names: Marta
+  - family-names: Rosell
+    given-names: Antoni
+  - family-names: Gil
+    given-names: Debora
+
+repository-code: "https://github.com/<your-org-or-user>/BronchoX"
+
+preferred-citation:
+  type: article
+  title: "BronchoX: bronchoscopy exploration software for biopsy intervention planning"
+  authors:
+    - family-names: Ramírez
+      given-names: Esmitt
+    - family-names: Sánchez
+      given-names: Carles
+    - family-names: Borràs
+      given-names: Agnés
+    - family-names: Diez-Ferrer
+      given-names: Marta
+    - family-names: Rosell
+      given-names: Antoni
+    - family-names: Gil
+      given-names: Debora
+  journal: "Healthcare Technology Letters"
+  year: 2018
+  volume: 5
+  issue: 5
+  start: 177
+  end: 182
+  doi: "10.1049/htl.2018.5074"
